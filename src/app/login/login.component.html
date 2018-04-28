@@ -1,0 +1,21 @@
+<form #todoform="ngForm" (ngSubmit)="login()" novalidate>
+  <div class="row">
+    <div class="form-group col-xs-12 col-sm-6">
+      <label for="Email">Email</label>
+      <input type="text" name="Email" class="form-control" required [(ngModel)]="Email" required>
+    </div>
+
+    <div class="form-group col-xs-12 col-sm-6">
+      <label for="Password">Password </label>
+      <input type="number" class="form-control" name="Password" required [(ngModel)]="Password" required>
+
+    </div>
+
+  </div>
+  <div class = "row">
+    <div class="col-sm-6">
+      <input type="submit" value="Login" class="btn btn-primary">
+
+    </div>
+  </div>
+</form>

@@ -1,0 +1,16 @@
+<form #todoform="ngForm" (ngSubmit)="Upppercase()" novalidate>
+  <div class="row">
+    <div class="form-group col-xs-12 col-sm-6">
+      <textarea type="text" name="TextUppercase" value="{{TextUppercase}}" class="form-control" required [(ngModel)]="TextUppercase" required></textarea>
+    </div>
+
+
+
+  </div>
+  <div class = "row">
+    <div class="col-sm-6">
+      <input type="submit" value="Uppercase" class="btn btn-primary">
+
+    </div>
+  </div>
+</form>

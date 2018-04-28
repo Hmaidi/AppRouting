@@ -1,0 +1,25 @@
+
+      <form #todoform="ngForm" (ngSubmit)="Chercher()" novalidate>
+        <div class="row">
+          <div class="form-group col-xs-12 col-sm-6">
+            <label for="City">City </label>
+            <input type="text" name="City" class="form-control" required [(ngModel)]="City" required>
+          </div>
+
+          <div class="form-group col-xs-12 col-sm-6">
+            <label for="Pays">Pays </label>
+            <input type="text" class="form-control" name="Pays" required [(ngModel)]="Pays" required>
+
+          </div>
+
+        </div>
+        <div class = "row">
+          <div class="col-sm-6">
+            <input type="submit" value="Chercher" class="btn btn-primary">
+
+          </div>
+        </div>
+      </form>
+      <h1></h1>
+      <h2>{{weatherData}}</h2>
+      <h1></h1>
