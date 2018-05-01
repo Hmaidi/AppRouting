@@ -24,7 +24,7 @@ router.post("/login", (req, res) =>{
           res.send( {message : "ok email and  password  correct", token:token});
          }
          else{
-           res.send({message :"wornong passsword"});
+           res.send({message :"wrong passsword"});
          }
 
       } else{
