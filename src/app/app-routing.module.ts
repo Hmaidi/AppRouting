@@ -8,9 +8,10 @@ import { UppCasserComponent } from './upp-casser/upp-casser.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WeatherComponent } from './weather/weather.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  {  path: '', component: HomeComponent},
+  {  path: '', component: HomeComponent, canActivate: [AuthGuard]},
   {  path: 'contact', component: ContactComponent},
   { path: 'UppCaser', component: UppCasserComponent},
   { path: 'weather', component: WeatherComponent },

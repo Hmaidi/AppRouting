@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service/service.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import { ServiceService } from '../service/service.service';
 export class LoginComponent implements OnInit {
   Password: number;
   Email: string;
-  constructor( private  apiservice: ServiceService  ) { }
+  constructor( private  apiservice: ServiceService, private router: Router  ) { }
 
   ngOnInit() {
   }
@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
        console.log(res.json());
        if ( res.json().message === 'ok email and  password  correct') {
          localStorage.setItem('TokenUser', res.json().token);
+         this.router.navigateByUrl('');
        }
      });
   }

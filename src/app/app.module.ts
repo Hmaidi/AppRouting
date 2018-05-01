@@ -16,7 +16,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { UppCasserComponent } from './upp-casser/upp-casser.component';
 import { WeatherComponent } from './weather/weather.component';
 import { LoginComponent } from './login/login.component';
-
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { LoginComponent } from './login/login.component';
     HttpModule,
     FormsModule
   ],
-  providers: [ ServiceService, WeatherService ],
+  providers: [ ServiceService, WeatherService, AuthGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
